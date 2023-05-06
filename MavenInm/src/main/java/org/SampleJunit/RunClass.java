@@ -1,0 +1,27 @@
+package org.SampleJunit;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class RunClass {
+	@Test
+	public void tc() {
+		Result rc = JUnitCore.runClasses(B.class,gmailAssert.class,A.class);
+		System.out.println("Total Run Count : " + rc.getRunCount());
+		System.out.println("Total Run Time Count : "+ rc.getRunTime());
+		System.out.println("Total Failure Count : " + rc.getFailureCount());
+		System.out.println("Total Ignore Count : "+ rc.getIgnoreCount());
+		
+		List<Failure> f = rc.getFailures();
+		for (Failure fail : f) {
+			System.out.println(fail);
+			
+		}
+	}
+	
+
+}

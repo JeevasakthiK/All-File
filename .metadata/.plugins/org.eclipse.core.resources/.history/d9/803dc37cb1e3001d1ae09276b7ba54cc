@@ -1,0 +1,80 @@
+package org.SampleJunit;
+
+import java.util.Date;
+
+import org.base.BaseClass;
+import org.fbLog.fbLogin;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class gmailAssert extends BaseClass {
+
+	@Test
+	public void tc3() {
+		System.out.println("Test Case 3 : Inmakes");
+		launchUrl("https://inmakes.com/");
+	}
+
+	@Test
+	public void tc5() {
+		System.out.println("Test Case 5 : YouTube");
+		launchUrl("https://www.youtube.com/");
+	}
+
+	@Before
+	public void startDate() {
+		Date d = new Date();
+		System.out.println("Start : "+ d);
+	}
+
+	@AfterClass
+	public static void close() {
+		System.out.println("Close the Browser...");
+		//crunt_tab();
+	}
+
+	@After
+	public void endDate() {
+		Date d = new Date();
+		System.out.println("End  : "+ d);
+	}
+
+	@BeforeClass
+	public static void brow() {
+		System.out.println("Browser Launch....");
+		launchBrowser();
+	}
+
+	@Test
+	public void tc1() {
+		System.out.println("Test Case 1 : Gmail");
+		
+		launchUrl("https://accounts.google.com/v3/signin/identifier?dsh=S1913577099%3A1682452179732541&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AQMjQ7Rj3Uq5tWUN506-inDd9nl8iwsQVCmrD6Nx1_fCoAWbRt8nRDN5NztaQM82y8eIUfxTU7suAQ&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+	}
+
+	@Ignore
+	@Test
+	public void tc4() {
+		System.out.println("Test Case 4 : Amazon");
+		launchUrl("https://www.amazon.in/");
+	}
+
+	@Test
+	public void tc2() {
+		System.out.println("Test Case 2 : Facebook");
+		launchUrl("https://en-gb.facebook.com/");
+		String title = title();
+		String currentUrl = currentUrl();
+		fbLogin f = new fbLogin();
+		value(f.getEmail(),"jeevasakthi@2404");
+		Assert.assertTrue(false);
+		value(f.getPwd(), "1223456");
+		click(f.getLogBtn());
+	}
+
+}

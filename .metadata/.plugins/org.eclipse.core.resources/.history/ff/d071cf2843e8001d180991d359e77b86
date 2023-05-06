@@ -1,0 +1,20 @@
+package org.stepdefinition;
+
+import org.Base.BaseClass;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+
+public class HooksClass extends BaseClass {
+	@Before
+	private void precondition() {
+		launchBrowser();
+		maxi();
+		
+	}
+	@After
+	private void postcondition() {
+		Close_tab();
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Mvn_Project&apos;&#x0D;&#x0A;- Original project: &apos;Mvn_Project&apos;&#x0D;&#x0A;- Original element: &apos;Mvn_Project/src/test/java/com.TesetNG&apos;&#x0D;&#x0A;- Delete subpackages" description="Delete element" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.TesetNG.Ex" element2="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.TesetNG" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1678768502587" subPackages="true" version="1.0"/>
+</session>
