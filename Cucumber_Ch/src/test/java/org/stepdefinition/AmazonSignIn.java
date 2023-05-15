@@ -3,6 +3,8 @@ package org.stepdefinition;
 import java.util.List;
 
 import org.base.Baseclass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.pojo.amazonSign;
 
 import cucumber.api.java.en.Then;
@@ -50,7 +52,8 @@ public class AmazonSignIn extends Baseclass {
 
 	@When("To click the search button")
 	public void to_click_the_search_button() {
-		click_Btn(a.getSearchBtn());
+	WebElement search = driver.findElement(By.id("nav-search-submit-button"));
+	search.click();
 	}
 
 	@Then("To close the browser")

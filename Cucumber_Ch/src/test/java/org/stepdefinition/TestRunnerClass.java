@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources",
-glue = "org.stepdefinition",monochrome = true,dryRun = true,
+glue = "org.stepdefinition",monochrome = true,dryRun = false,
 snippets = SnippetType.UNDERSCORE)
 
 public class TestRunnerClass {

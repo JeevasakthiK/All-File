@@ -2,7 +2,7 @@ package com.looping;
 
 public class Reverse_array {
 	public static void main(String[] args) {
-		String head="Welcomes to Greens";
+		String head="Welcomes to Inmakes";
 		String rev = " ";
 		System.out.println("Given String is : "+head);
 		char a[] =head.toCharArray();
